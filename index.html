@@ -9,19 +9,47 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
+            padding: 0;
             height: 100vh;
+            background-color: #4CAF50; /* Green background */
+            color: white;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: green;
-            color: white;
+            overflow: hidden;
         }
+
         h1 {
             font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .tractor {
+            position: absolute;
+            left: -200px; /* Start position (off-screen) */
+            bottom: 100px;
+            width: 150px;
+            animation: driveIn 5s ease-out forwards;
+        }
+
+        @keyframes driveIn {
+            0% { left: -200px; }
+            100% { left: 50%; transform: translateX(-50%); }
+        }
+
+        .numbers {
+            font-size: 2rem;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Einarsen Landbrukstjenester</h1>
+    
+    <!-- Tractor Image (Upload "tractor.png" to your GitHub repo) -->
+    <img src="tractor.png" alt="Tractor" class="tractor">
+    
+    <div class="numbers">123</div>
 </body>
 </html>
